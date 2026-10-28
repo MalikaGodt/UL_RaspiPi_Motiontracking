@@ -37,7 +37,7 @@ var table = new Dictionary<int, Point2d>
     [3] = new Point2d(0, side),
 };
 
-using var dictionary = CvAruco.GetPredefinedDictionary(PredefinedDictionaryName.Dict4X4_50);
+using var dictionary = CvAruco.GetPredefinedDictionary(PredefinedDictionaryType.Dict4X4_50);
 using var detector = new ArucoDetector(dictionary);
 
 Mat? homography = null;                  // image pixels -> table mm
@@ -136,3 +136,4 @@ while (running)
 }
 
 homography?.Dispose();
+
